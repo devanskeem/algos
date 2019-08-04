@@ -7,7 +7,7 @@
     ..
 
     Input: B12
-    Output (2, 12)
+    Output (12, 2)
 */
 
 function coordinatesToIntegers(coordinates){
@@ -26,10 +26,10 @@ function coordinatesToIntegers(coordinates){
             column += coordinates[i].charCodeAt(0) - 64
         }
         else column += (coordinates[i].charCodeAt(0) - 64) * 26;        
-   }
-    console.log('col: ', column)
-    console.log('row: ', row)
+    }
+
+    return `(${row}, ${column})`
 
 }
 
-coordinatesToIntegers('c12')
+console.log(coordinatesToIntegers('dbs15'))
